@@ -96,37 +96,57 @@
     background-color: #075E54; /* Cor verde ainda mais escura ao clicar */
 }
 .formulario {
-    width: 400px;
+    width: 90%; /* Largura relativa para telas menores */
+    max-width: 400px; /* Largura máxima para telas maiores */
     padding: 20px;
     font-family: sans-serif;
-  }
-  
-  .formulario h2 {
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.formulario h2 {
     color: #333;
-  }
-  
-  .formulario label {
+}
+
+.formulario label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  .formulario input,
-  .formulario select {
-    width: 100%;
+}
+
+.formulario input,
+.formulario select {
+    width: calc(100% - 22px); /* Ajuste para compensar o padding e a borda */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .formulario button {
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura */
+}
+
+.formulario button {
     background-color: #ff9900; /* Laranja da imagem */
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-  }
+    width: 100%; /* Largura total para telas menores */
+}
+
+/* Media query para telas menores (abaixo de 600px) */
+@media (max-width: 600px) {
+    .formulario {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+
+    .formulario input,
+    .formulario select {
+        padding: 8px; /* Reduz o padding dos campos em telas menores */
+    }
+
+    .formulario button {
+        padding: 10px 15px; /* Reduz o padding do botão em telas menores */
+    }
+}
 
   .footer {
     background-color: #333; /* Cor de fundo escura */
